@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   contentComponent: null,
   dayWidth: Ember.computed.oneWay('contentComponent.dayWidth'),
   referenceElement: Ember.computed.oneWay('contentComponent.element'),
+  showTimeZone: true,
 
   labeledTimeSlots: Ember.computed('timeSlots.[]', function() {
     return this.get('timeSlots').filter(function(_, index) {
